@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+
+:root {
+    font: normal 10px/1.5 'Helvetica', 'Inter', sans-serif;
+
+    color: #ddd;
+    background-color: #222;
+}
+
+body {
+    font-size: 1.6rem;
+    color: inherit;
+    background-color: inherit;
+}
