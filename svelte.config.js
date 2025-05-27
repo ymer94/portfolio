@@ -1,7 +1,6 @@
 import { mdsvex } from 'mdsvex'
 import adapter from '@sveltejs/adapter-static'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
-import { base } from '$service-worker';
 
 const libPath = 'src/lib', assetPath = `${libPath}/static`, config = {
 	preprocess: [vitePreprocess(), mdsvex()],
