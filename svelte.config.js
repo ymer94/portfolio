@@ -5,7 +5,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 const libPath = 'src/lib', assetPath = `${libPath}/static`, config = {
 	preprocess: [
 		vitePreprocess(),
-		mdsvex()
+		mdsvex(),
 	],
 	kit: {
 		adapter: adapter(),
@@ -14,11 +14,11 @@ const libPath = 'src/lib', assetPath = `${libPath}/static`, config = {
 			assets: assetPath
         },
 		alias: {
-			$css : `${assetPath}/css`,
-			$img: `${assetPath}/img`,
-			$fonts: `${assetPath}/fonts`,
-			$lib: libPath,
-			$components: `${libPath}/components`
+			css : `${assetPath}/css`,
+			img: `${assetPath}/img`,
+			fonts: `${assetPath}/fonts`,
+			lib: libPath,
+			components: `${libPath}/components`
 		}
 	 },
 	extensions: [
