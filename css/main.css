@@ -1,8 +1,8 @@
 
-
-@media (width >= 48rem) {
-    body > main {
+body > main {
+    background-color: var(--color-purple-950);
+    
+    @media (width >= 48rem) {
         max-width: 75%;
-        background-color: var(--color-purple-950);
     }
 }
