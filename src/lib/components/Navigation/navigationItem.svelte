@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from '$app/paths';
     import { page } from '$app/stores'
 
     export type Page = {
@@ -13,7 +14,7 @@
 </script>
 
 <li class="w-full md:w-auto" class:active={ $page.url.pathname === path }>
-    <a class="w-full inline-block" href={path}>
+    <a class="w-full inline-block" href={`${base}${path}`}>
         {#if globalThis.language === 'en'}
             {name.en}
         {:else}

@@ -19,7 +19,10 @@ const libPath = 'src/lib', assetPath = `${libPath}/static`, config = {
 			fonts: `${assetPath}/fonts`,
 			lib: libPath,
 			components: `${libPath}/components`
-		}
+		},
+		paths: {
+            base: ['development'].includes(process.env.NODE_ENV) ? '' : '/portfolio',
+        }
 	 },
 	extensions: [
 		'.svelte',
