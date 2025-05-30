@@ -1,6 +1,7 @@
 <script lang="ts">
-    import { base } from '$app/paths';
-    import { page } from '$app/stores'
+    import { base } from '$app/paths'
+    import { Language } from '$lib/models/Language'
+	import { getStores } from '$app/stores'
 
     export type Page = {
         name: {
@@ -10,15 +11,15 @@
         path: string
     }
     
-    const { navPage } = $props<Page>(), { name, path } = navPage
+    const { page } = getStores(), { navPage } = $props<{ navPage: Page }>(), { name, path } = navPage
 </script>
 
 <li class="w-full md:w-auto" class:active={ $page.url.pathname === path }>
     <a class="w-full inline-block" href={`${base}${path}`}>
-        {#if globalThis.language === 'en'}
-            {name.en}
-        {:else}
+        {#if globalThis.language === Language.SV}
             {name.sv}
+        {:else}
+            {name.en}
         {/if}
     </a>
 </li>
