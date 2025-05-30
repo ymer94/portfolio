@@ -3,5 +3,6 @@
 @media (width >= 48rem) {
     body > main {
         max-width: 75%;
+        background-color: var(--color-purple-950);
     }
 }

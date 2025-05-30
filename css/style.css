@@ -1,18 +1,28 @@
 @import 'tailwindcss';
+@import './main.css';
 
 :root {
-    font: normal 10px/1.5 'Helvetica', 'Inter', sans-serif;
+    --color-purple-light: #b3f;
+    --color-purple: #80f;
+    --color-purple-dark: #409;
+    --color-purple-darker: #306;
 
+    font: normal 10px/1.5 'Helvetica', 'Inter', sans-serif;
     color: #ddd;
     background-color: #222;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100dvh;
     font-size: 1.6rem;
     color: inherit;
     background-color: inherit;
     
     & header, main, footer {
+        width: 100%;
         padding: 1rem;
     }
 
@@ -57,11 +67,11 @@ body {
                     transition: all 200ms ease-in-out;
 
                     &:hover {
-                        background-color: #4d0099;
+                        background-color: var(--color-purple-dark);
                     }
 
                     &.active, &:active {
-                        background-color: #330066;
+                        background-color: var(--color-purple-darker);
                         text-decoration: underline;
                     }
 
