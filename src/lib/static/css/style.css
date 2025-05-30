@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './radlush.css';
 @import './main.css';
 
 :root {
@@ -7,7 +8,7 @@
     --color-purple-dark: #409;
     --color-purple-darker: #306;
 
-    font: normal 10px/1.5 'Helvetica', 'Inter', sans-serif;
+    font: normal 10px/1.5 'Radlush', sans-serif;
     color: #ddd;
     background-color: #222;
 }
