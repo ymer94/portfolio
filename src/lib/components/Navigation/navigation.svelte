@@ -1,5 +1,6 @@
 <script lang="ts">
     import NavigationItem, { type Page } from 'components/Navigation/navigationItem.svelte'
+    import HamburgerButton from './HamburgerButton.svelte';
 
     const pages: Page[] = [{
         name: {
@@ -22,12 +23,17 @@
         },
         path: '/contact'
     }]
+
+    let isOpen = false;
 </script>
 
-<nav>
-    <ul>
-        {#each pages as page}
-            <NavigationItem {page} />
-        {/each}
-    </ul>
+<nav class="w-full px-4 py-3">
+    <div class="flex justify-end items-center">
+        <HamburgerButton bind:isOpen />
+        <ul class="hidden flex-col md:space-y-0 md:space-x-6" class:hidden={ !isOpen } class:flex={ isOpen }>
+            {#each pages as navPage}
+                <NavigationItem {navPage} />
+            {/each}
+        </ul>
+    </div>
 </nav>
