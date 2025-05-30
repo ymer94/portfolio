@@ -1,8 +1,8 @@
 <script lang="ts">
-    import NavigationItem, { type Page } from 'components/Navigation/navigationItem.svelte'
-    import HamburgerButton from './HamburgerButton.svelte';
+    import NavigationItem, { type NavigationPageObject } from './navigationItem.svelte'
+    import HamburgerButton from './hamburgerButton.svelte'
 
-    const pages: Page[] = [{
+    const navPgObjs: NavigationPageObject[] = [{
         name: {
             en: 'Home',
             sv: 'Hem'
@@ -31,8 +31,8 @@
     <div class="flex justify-end items-center">
         <HamburgerButton bind:isOpen />
         <ul class="hidden flex-col md:space-y-0 md:space-x-6" class:hidden={ !isOpen } class:flex={ isOpen }>
-            {#each pages as navPage}
-                <NavigationItem {navPage} />
+            {#each navPgObjs as navPgObj}
+                <NavigationItem {navPgObj} />
             {/each}
         </ul>
     </div>

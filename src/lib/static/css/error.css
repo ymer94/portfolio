@@ -1,5 +1,5 @@
 
-body > main {
+body > main.error {
     margin: auto;
     display: flex;
     flex-direction: column;

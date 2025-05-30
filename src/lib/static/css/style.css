@@ -26,6 +26,10 @@ body {
         padding: 1rem;
     }
 
+    & a, button {
+        cursor: pointer;
+    }
+
     & header {
         --backgruond-color-header: #1a1a1a;
         background-color: var(--backgruond-color-header);
