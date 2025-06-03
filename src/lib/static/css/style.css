@@ -2,6 +2,7 @@
 @import './radlush.css';
 @import './main.css';
 
+
 :root {
     --color-purple-light: #b3f;
     --color-purple: #80f;
@@ -11,6 +12,36 @@
     font: normal 10px/1.5 'Radlush', sans-serif;
     color: #ddd;
     background-color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    text-align: center;
+    line-height: 1;
+
+    &:not(:last-child) {
+        margin-bottom: .5em;
+    }
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+a, button {
+    cursor: pointer;
 }
 
 body {
@@ -24,11 +55,10 @@ body {
     
     & header, main, footer {
         width: 100%;
-        padding: 1rem;
     }
 
-    & a, button {
-        cursor: pointer;
+    & header, footer {
+        padding: 1rem;
     }
 
     & header {
