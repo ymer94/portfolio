@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from "$app/paths";
+	import { base } from '$app/paths';
 </script>
 
 <img src="{ base }/img/profile.png" alt="Anime style portrait of Ymer Nordström.">
