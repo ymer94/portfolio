@@ -20,7 +20,7 @@
         max-width: 50em;
         font-size: 1.25em;
 
-        @media (width < 48em) {
+        @media (width >= 48rem) {
             text-align: justify;
         }
     }
