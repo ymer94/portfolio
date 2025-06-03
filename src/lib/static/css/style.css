@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './radlush.css';
+@import './header.css';
 @import './main.css';
 
 
@@ -59,62 +60,5 @@ body {
 
     & header, footer {
         padding: 1rem;
-    }
-
-    & header {
-        --backgruond-color-header: #1a1a1a;
-        background-color: var(--backgruond-color-header);
-
-        & nav > div {
-            & > #button-burger > div > span {
-                width: 100%;
-                height: calc(var(--spacing) * 0.5);
-                background-color: currentcolor;
-                transition-property: all;
-                transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-                transition-duration: var(--tw-duration, var(--default-transition-duration));
-            }
-
-            & > ul {
-                width: 50%;
-                position: absolute;
-                top: 100%;
-                right: 0;
-                background-color: var(--backgruond-color-header);
-                flex-direction: column;
-                align-items: center;
-                padding: 1rem;
-
-                @media (width >= 48rem) {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-end;
-                    align-items: center;
-                    position: static;
-                    width: auto;
-                    padding: 0;
-                }
-                
-                
-                & > li {
-                    display: block;
-                    border-radius: 0.5rem;
-                    transition: all 200ms ease-in-out;
-
-                    &:hover {
-                        background-color: var(--color-purple-dark);
-                    }
-
-                    &.active, &:active {
-                        background-color: var(--color-purple-darker);
-                        text-decoration: underline;
-                    }
-
-                    & a {
-                        padding: 0.5rem 1rem;
-                    }
-                }
-            }
-        }
     }
 }

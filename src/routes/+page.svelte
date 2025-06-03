@@ -1,6 +1,4 @@
-<div>
-    <img src="/img/profile.png" alt="Anime style portrait of Ymer Nordström.">
-</div>
+<img src="/img/profile.png" alt="Anime style portrait of Ymer Nordström.">
 <section>
     <h1>Ymer Nordström</h1>
     <h2>Software developer</h2>
@@ -11,21 +9,19 @@
 </section>
 
 <style>
-    div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        & > img {
-            width: 15rem;
-            height: 15rem;
-            border: .25rem solid var(--color-purple-light);
-            border-radius: 50%;
-        }
+    img {
+        width: 15rem;
+        height: 15rem;
+        border: .25rem solid var(--color-purple-light);
+        border-radius: 50%;
     }
 
     p {
         max-width: 50em;
-        text-align: justify;
+        font-size: 1.25em;
+
+        @media (width < 48em) {
+            text-align: justify;
+        }
     }
 </style>
