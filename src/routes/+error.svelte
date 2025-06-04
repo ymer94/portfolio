@@ -1,11 +1,11 @@
 <script lang="ts">
     import { browser } from '$app/environment'
-    import { base } from '$app/paths'
     import { getStores } from '$app/stores'
-	import { onDestroy } from 'svelte';
+	import { onDestroy } from 'svelte'
+	import paths from 'lib/helpers/paths.svelte'
     import 'css/error.css'
 
-    const { page } = getStores(), home = `${base}/`
+    const { page } = getStores(), home = paths.addBase('/')
 
     if (browser) {
         const main = document.querySelector('body > main')

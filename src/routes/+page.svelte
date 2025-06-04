@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import paths from '$lib/helpers/paths.svelte'
 </script>
 
-<img src="{ base }/img/profile.png" alt="Anime style portrait of Ymer Nordström.">
+<img src={ paths.addBase('/img/profile.png') } alt="Anime style portrait of Ymer Nordström.">
 <section>
     <h1>Ymer Nordström</h1>
     <h2>Software developer</h2>
