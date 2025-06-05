@@ -10,13 +10,17 @@
         },
         path: string
     }
+
+    type Props = {
+        navPgObj: NavigationPageObject
+    }
     
-    const { page } = getStores(), { navPgObj } = $props<{ navPgObj: NavigationPageObject }>(), { name, path } = navPgObj
+    const { page } = getStores(), { navPgObj }: Props = $props<{} & Props>(), { name, path } = navPgObj
 </script>
 
 
 <li class="w-full md:w-auto" class:active={ $page.url.pathname === paths.addBase(path) } data-sveltekit-preload-data>
-    <a class="w-full inline-block" href={path.addBase(path)}>
+    <a class="w-full inline-block" href={paths.addBase(path)}>
         {#if globalThis.language === Language.SV}
             {name.sv}
         {:else}
