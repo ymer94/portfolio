@@ -26,6 +26,5 @@ vite.config.ts.timestamp-*
 .editorconfig
 package-lock.json
 pnpm-*.yaml
-_app
 *.jpg~
 *.kra
