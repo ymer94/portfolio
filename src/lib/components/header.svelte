@@ -1,17 +1,35 @@
 <script lang='ts'>
-	import Navigation from './Navigation/NavList.svelte'
-	import Socials from './Social Links/SocList.svelte';
+	import Navigation from './Navigation/navigation.svelte'
+	import Socials from './Social Links/socials.svelte'
 </script>
 
-<header class='sticky top-0 z-50'>
+<header class='sticky top-0 z-50' style='--icon-size: 2.4rem'>
 	<Socials />
+	<div>
+		<i class='icon thors-coding'></i>
+	</div>
 	<Navigation />
 </header>
 
 <style>
 	header {
 		display: grid;
-		grid-template-columns: 1fr auto;
+		grid-template-columns: repeat(3, 1fr);
 		align-items: center;
+
+		> :global(*) {
+			padding-block: calc(var(--spacing) * 3);
+			padding-inline: calc(var(--spacing) * 4);
+		}
+
+		> :nth-child(2) {
+			text-align: center;
+		}
+
+		i {
+			width: 4em;
+			height: 4em;
+			vertical-align: middle;
+		}
 	}
 </style>

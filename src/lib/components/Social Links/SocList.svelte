@@ -1,31 +1,13 @@
 <script lang='ts'>
     import SocialItem, { type SocialItemObject } from './SocItem.svelte';
 
-    const size = '2.4rem' ,socItmObjs: SocialItemObject[] = [
+    const socItmObjs: SocialItemObject[] = [
         {
             name: 'LinkedIn',
             url: 'https://linkedin.com/in/ymer',
             icon: {
                 name: 'cib:linkedin',
-                color: '#0a66C2',
-                size
-            }
-        },
-        {
-            name: 'GitHub',
-            url: 'https://github.com/ymer94',
-            icon: {
-                name: 'cib:github',
-                color: '#f0f6fc',
-                size
-            }
-        },
-        {
-            name: 'GitLab',
-            url: 'https://gitlab.com/ymer94',
-            icon: {
-                name: 'devicon:gitlab',
-                size
+                color: '#0a66C2'
             }
         },
         {
@@ -33,14 +15,28 @@
             url: 'https://codewars.com/users/ymer94',
             icon: {
                 name: 'cib:codewars',
-                color: '#f05656',
-                size
+                color: '#f05656'
+            }
+        },
+        {
+            name: 'GitHub',
+            url: 'https://github.com/ymer94',
+            icon: {
+                name: 'cib:github',
+                color: '#f0f6fc'
+            }
+        },
+        {
+            name: 'GitLab',
+            url: 'https://gitlab.com/ymer94',
+            icon: {
+                name: '.gitlab'
             }
         }
     ]
 </script>
 
-<ul class='flex px-4 py-3'>
+<ul>
     {#each socItmObjs as socItmObj}
         <SocialItem { socItmObj } />
     {/each}
@@ -48,7 +44,13 @@
 
 <style>
     ul {
-        align-items: center;
+        display: grid;
+        grid-template: repeat(2, var(--icon-size)) / repeat(2, var(--icon-size));
         gap: 1em;
+
+        @media (width >= 48rem) {
+            display: flex;
+            align-items: center;
+        }
     }
 </style>

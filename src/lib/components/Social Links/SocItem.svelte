@@ -6,8 +6,7 @@
         url: string,
         icon: {
             name: string,
-            color?: string,
-            size?: string
+            color?: string
         }
     }
 
@@ -22,9 +21,9 @@
 <li>
     <a href={ url } target='_blank' rel='noopener noreferrer'>
         {#if icon.name.startsWith('.')}
-            <i class={ `icon ${icon.name.slice(1)}` } style={ `width: ${icon.size}; height: ${icon.size}` }></i>
+            <i class={ `icon ${icon.name.slice(1)}` }></i>
         {:else}
-            <Icon icon={ icon.name } width={ icon.size ?? '2.4rem' } color={ icon.color ?? '' }/>
+            <Icon icon={ icon.name } color={ icon.color }/>
         {/if}
         {#if displayName}
             { name }
@@ -40,6 +39,11 @@
         a {
             display: flex;
             align-items: center;
+
+            i, :global(svg) {
+                width: var(--icon-size);
+                height: var(--icon-size);
+            }
         }
     }
 </style>
