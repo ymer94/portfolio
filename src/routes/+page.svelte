@@ -1,15 +1,27 @@
-<script lang="ts">
+<script lang='ts'>
 	import paths from '$lib/helpers/paths.svelte'
 </script>
 
-<img src={ paths.addBase('/img/profile.png') } alt="Anime style portrait of Ymer Nordström.">
+<img src={ paths.addBase('/img/profile.png') } alt='Anime style portrait of Ymer Nordström.'>
 <section>
     <h1>Ymer Nordström</h1>
     <h2>Software developer</h2>
     <p>
-        I am a software developer with a passion for creating innovative solutions. I have experience in various programming languages and frameworks, and I enjoy tackling complex challenges. My goal is to contribute to projects that make a positive impact on users and the world.
-        I am always eager to learn new technologies and improve my skills. Let's connect and explore opportunities to collaborate on exciting projects!
+        I'm a general software developer with a passion for creating customized solutions directly against end users.
+        In my years I have worked in a number of different teams, languages & environments.
     </p>
+    <section>
+        <h3>
+            Some of my experience:
+        </h3>
+        <ul>
+            <li>HTML/PHP (WordPress...)</li>
+            <li>CSS/Sass (Tailwind/Bootstrap...)</li>
+            <li>JS/TS (React/Next/Svelte...)</li>
+            <li>Node.js (Express, Axios...)</li>
+            <li>Git/GitHub/GitLab</li>
+        </ul>
+    </section>
 </section>
 
 <style>
@@ -18,6 +30,14 @@
         height: 15rem;
         border: .25rem solid var(--color-purple-light);
         border-radius: 50%;
+    }
+
+    section {
+        > section, p, ul {
+            &:not(:last-child) {
+                margin-bottom: 1em;
+            }
+        }
     }
 
     p {
