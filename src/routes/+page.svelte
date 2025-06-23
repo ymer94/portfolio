@@ -1,5 +1,6 @@
 <script lang='ts'>
 	import paths from '$lib/helpers/paths.svelte'
+	import Icon from '@iconify/svelte';
 </script>
 
 <img src={ paths.addBase('/img/profile.png') } alt='Anime style portrait of Ymer Nordström.'>
@@ -15,11 +16,11 @@
             Some of my experience:
         </h3>
         <ul>
-            <li>HTML/PHP (WordPress...)</li>
-            <li>CSS/Sass (Tailwind/Bootstrap...)</li>
-            <li>JS/TS (React/Next/Svelte...)</li>
-            <li>Node.js (Express, Axios...)</li>
-            <li>Git/GitHub/GitLab</li>
+            <li><Icon icon='devicon:html5' />HTML<span>/</span><Icon icon='devicon:php' />PHP <span>(</span><Icon icon='cib:wordpress' />WordPress<span>...</span><span>)</span></li>
+            <li><Icon icon='devicon:css3' />CSS<span>/</span><Icon icon='cib:sass' color='#CD6799' />Sass <span>(</span><Icon icon='devicon:tailwindcss' />Tailwind<span>/</span><Icon icon='devicon:bootstrap' />Bootstrap<span>...</span><span>)</span></li>
+            <li><Icon icon='devicon:javascript' />JS<span>/</span><Icon icon='devicon:typescript' />TS <span>(</span><Icon icon='devicon:react' />React<span>/</span><Icon icon='devicon:nextjs' />Next.js<span>/</span><Icon icon='devicon:svelte' />Svelte<span>...</span><span>)</span></li>
+            <li><Icon icon='devicon:nodejs' />Node.js <span>(</span><Icon icon='devicon:express' />Express, <Icon icon='devicon-plain:axios' color='#5a29e4' />Axios<span>...</span><span>)</span></li>
+            <li><Icon icon='devicon:git' />Git<span>/</span><Icon icon='devicon:github' />GitHub<span>/</span><Icon icon='devicon:gitlab' />GitLab</li>
         </ul>
     </section>
 </section>
@@ -47,5 +48,11 @@
         @media (width >= 48rem) {
             text-align: justify;
         }
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: .5em;
     }
 </style>
