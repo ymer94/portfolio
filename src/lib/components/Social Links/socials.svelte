@@ -24,7 +24,7 @@
             name: 'GitLab',
             url: 'https://gitlab.com/ymer94',
             icon: {
-                name: '.gitlab',
+                name: 'devicon:gitlab',
                 size
             }
         },

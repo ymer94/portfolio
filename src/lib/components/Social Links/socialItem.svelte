@@ -25,7 +25,7 @@
         {#if icon.name.startsWith('.')}
             <i class={ `icon ${icon.name.slice(1)}` } style={ `width: ${icon.size}; height: ${icon.size}` }></i>
         {:else}
-            <Icon icon={ icon.name } width={ icon.size ?? '2.4rem' } color={ icon.color }/>
+            <Icon icon={ icon.name } width={ icon.size ?? '2.4rem' } color={ icon.color ?? '' }/>
         {/if}
         {#if displayName}
             { name }

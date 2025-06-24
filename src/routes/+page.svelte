@@ -13,7 +13,7 @@
     </p>
     <section>
         <h3>
-            Some of my experience:
+            With experience in:
         </h3>
         <ul>
             <li><Icon icon='devicon:html5' />HTML<span>/</span><Icon icon='devicon:php' />PHP <span>(</span><Icon icon='cib:wordpress' />WordPress<span>...</span><span>)</span></li>
