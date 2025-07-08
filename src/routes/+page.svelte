@@ -12,6 +12,14 @@
         directly against end users. In my years I have worked in a number of different teams,
         languages & environments.
     </p>
+    <p>
+        To see more of my work, head on over to my
+        <a href="/projects">
+            <Icon icon="mdi:terminal"/>
+            <span>projects</span>
+        </a>
+        page.
+    </p>
 </section>
 <section>
     <h3>
@@ -116,5 +124,4 @@
             gap: .5em;
         }
     }
-
 </style>

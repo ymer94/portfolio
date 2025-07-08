@@ -45,6 +45,23 @@ a, button {
     cursor: pointer;
 }
 
+a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: .25em;
+
+    > svg {
+        width: 1em;
+        height: 1em;
+        position: relative;
+        top: .3em;
+    }
+
+    > span {
+        text-decoration: underline;
+    }
+}
+
 body {
     display: flex;
     flex-direction: column;
