@@ -1,11 +1,11 @@
-import type { AxiosInstance } from "axios";
-import axios from "axios";
+import type { AxiosInstance } from 'axios'
+import axios from 'axios'
 
 export class BaseService {
     private ax: AxiosInstance
 
     constructor(baseURL: string) {
-        this.ax = axios.create({ baseURL });
+        this.ax = axios.create({ baseURL })
     }
 
     private checkEndPointStr = (str: string) => `${str.charAt(0) !== '/' ? `/${str}` : str}`
