@@ -5,14 +5,18 @@
 @import './main.css';
 
 :root {
+    --color-bg: #222;
+    --color-fg: #ddd;
+
     --color-purple-light: #b3f;
     --color-purple: #80f;
     --color-purple-dark: #409;
     --color-purple-darker: #306;
+    --color-purple-link: #dd0;
 
+    background-color: var(--color-bg);
+    color: var(--color-fg);
     font: normal 10px/1.5 'Radlush', sans-serif;
-    color: #ddd;
-    background-color: #222;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,6 +47,24 @@ h3 {
 
 a, button {
     cursor: pointer;
+}
+
+a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: .25em;
+    color: var(--color-purple-link);
+
+    &:hover, &:active, > span {
+        text-decoration: underline;
+    }
+
+    > svg {
+        width: 1em;
+        height: 1em;
+        position: relative;
+        top: .3em;
+    }
 }
 
 body {
