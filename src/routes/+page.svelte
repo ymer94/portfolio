@@ -14,7 +14,7 @@
     </p>
     <p>
         To see more of my work, head on over to my
-        <a href="/projects">
+        <a href={ paths.addBase('/projects') }>
             <Icon icon="mdi:terminal"/>
             <span>projects</span>
         </a>
