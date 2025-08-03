@@ -1,6 +1,6 @@
 <script lang='ts'>
 	import type { IGitHubRepo } from '$lib/models/IGitHubRepo'
-	import Item from './Item.svelte';
+	import Item from './ProjectItem.svelte';
 
     type Props = {
         repos: IGitHubRepo[]

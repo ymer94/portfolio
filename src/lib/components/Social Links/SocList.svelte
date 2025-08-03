@@ -1,5 +1,5 @@
 <script lang="ts">
-    import SocialItem, { type SocialItemObject } from './socialItem.svelte';
+    import SocialItem, { type SocialItemObject } from './SocItem.svelte';
 
     const size = '2.4rem' ,socItmObjs: SocialItemObject[] = [
         {
