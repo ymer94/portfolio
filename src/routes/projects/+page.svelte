@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import { onMount } from 'svelte';
+	import { onMount } from 'svelte'
     import { GitHubAPI }  from '$lib/services/gitHubAPI'
 	import type { IGitHubRepo } from '$lib/models/IGitHubRepo'
     import List from '$lib/components/Project/List.svelte'

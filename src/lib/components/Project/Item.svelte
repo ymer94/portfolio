@@ -44,15 +44,16 @@
         }
 
         div {
-            max-width: 30rem;
-            max-height: 15rem;
-            padding: 1rem;
-            background-color: var(--color-bg);
-
+            align-self: center;
+            background-color: var(--color-purple-dark);
+            border-radius: .5em;
+            
+            
             img, :global(svg):first-child {
-                max-width: 28rem;
-                max-height: 13rem;
-                object-fit: scale-down;
+                width: 32rem;
+                height: 18rem;
+                padding: .5em;
+                object-fit: fill;
             }
         }
 
