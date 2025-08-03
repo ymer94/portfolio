@@ -1,7 +1,7 @@
 <script lang='ts'>
     import { Language } from '$lib/models/Language'
 	import { getStores } from '$app/stores'
-	import paths from '$lib/helpers/paths.svelte';
+	import paths from '$lib/helpers/paths.svelte'
 
     export type NavigationPageObject = {
         name: {

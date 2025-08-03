@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang='ts'>
     import Icon from '@iconify/svelte'
 
     export type SocialItemObject = {
@@ -20,7 +20,7 @@
 </script>
 
 <li>
-    <a href={ url } target="_blank" rel="noopener noreferrer">
+    <a href={ url } target='_blank' rel='noopener noreferrer'>
         {#if icon.name.startsWith('.')}
             <i class={ `icon ${icon.name.slice(1)}` } style={ `width: ${icon.size}; height: ${icon.size}` }></i>
         {:else}
