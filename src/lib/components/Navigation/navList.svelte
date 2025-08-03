@@ -1,5 +1,5 @@
 <script lang="ts">
-    import NavigationItem, { type NavigationPageObject } from './navigationItem.svelte'
+    import NavigationItem, { type NavigationPageObject } from './navItem.svelte'
     import HamburgerButton from './hamburgerButton.svelte'
 
     const navPgObjs: NavigationPageObject[] = [{

@@ -1,10 +1,10 @@
-import { type IGitHubRepos } from '../models/IGitHubRepos'
+import { type IGitHubRepo } from '../models/IGitHubRepo'
 import { BaseService } from './base'
 import { LocalStorageHelper } from '../helpers/localStorage';
 
 type LSRespObj = {
     lastFetched: Date,
-    repos: IGitHubRepos[]
+    repos: IGitHubRepo[]
 }
 
 export class GitHubAPI {
@@ -19,7 +19,7 @@ export class GitHubAPI {
         const respObj = this.LSRepos.get()
 
          return respObj && respObj.lastFetched.getDay() <= new Date(Date.now() + (864 * 10 ** 5)).getDay() ? respObj.repos : (async () => {
-                const repos = (await this.service.get<IGitHubRepos[]>(`users/${this.userName}/repos`)).filter(r => r.visibility === 'public') ?? []
+                const repos = (await this.service.get<IGitHubRepo[]>(`users/${this.userName}/repos`)).filter(r => r.visibility === 'public') ?? []
 
                 if (repos.length > 0) this.LSRepos.set({lastFetched: new Date(), repos} satisfies LSRespObj as LSRespObj)
 

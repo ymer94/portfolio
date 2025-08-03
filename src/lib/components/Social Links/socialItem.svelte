@@ -16,8 +16,7 @@
         displayName?: boolean
     }
 
-    const props: Props = $props<{} & Props >(),
-    {name, url, icon} = props.socItmObj, displayName = props.displayName ?? false
+    const props: Props = $props(), {name, url, icon} = props.socItmObj, displayName = props.displayName ?? false
 </script>
 
 <li>
