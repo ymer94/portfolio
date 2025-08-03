@@ -1,18 +1,21 @@
 <script lang='ts'>
+	import { onMount } from 'svelte';
     import { GitHubAPI }  from '$lib/services/gitHubAPI'
 	import type { IGitHubRepos } from 'lib/models/IGitHubRepos'
 	import Icon from '@iconify/svelte'
 	import paths from 'lib/helpers/paths.svelte';
     
-    let ymerMIRepos: IGitHubRepos[] = [], imgErr: Record<string, boolean> = {}
+    const imgErr: Record<string, boolean> = {}
+    let ymerMIRepos: IGitHubRepos[] = []
+    
 
-    try {
-        (async () => {
+    onMount(async () => {
+        try {
             ymerMIRepos = await new GitHubAPI('Ymer-MI').getRepos()
-        })()
-    } catch (error) {
-        console.error('Error in load function:', error);
-    }
+        } catch (error) {
+            console.error('Error in load function:', error)
+        }
+    })
 </script>
 
 <h1>My projects</h1>
