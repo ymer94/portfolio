@@ -1,9 +1,9 @@
-<script lang="ts">
-	import Navigation from './Navigation/navigation.svelte'
-	import Socials from './Social Links/socials.svelte';
+<script lang='ts'>
+	import Navigation from './Navigation/NavList.svelte'
+	import Socials from './Social Links/SocList.svelte';
 </script>
 
-<header class="sticky top-0 z-50">
+<header class='sticky top-0 z-50'>
 	<Socials />
 	<Navigation />
 </header>

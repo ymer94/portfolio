@@ -1,5 +1,5 @@
-<script lang="ts">
-    import SocialItem, { type SocialItemObject } from './socialItem.svelte';
+<script lang='ts'>
+    import SocialItem, { type SocialItemObject } from './SocItem.svelte';
 
     const size = '2.4rem' ,socItmObjs: SocialItemObject[] = [
         {
@@ -40,7 +40,7 @@
     ]
 </script>
 
-<ul class="flex px-4 py-3">
+<ul class='flex px-4 py-3'>
     {#each socItmObjs as socItmObj}
         <SocialItem { socItmObj } />
     {/each}

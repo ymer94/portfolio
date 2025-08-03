@@ -20,7 +20,7 @@ interface IOwner {
     site_admin:          boolean
 }
 
-export interface IGitHubRepos {
+export interface IGitHubRepo {
     id:                          number,
     node_id:                     string,
     name:                        string,
