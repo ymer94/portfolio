@@ -13,7 +13,10 @@
         languages & environments.
     </p>
     <p>
-        To see more of my work, head on over to my
+        I have a background as a Java developer, but I am now expanding my skills with a front-end education at Medieinstitutet. My passion for technology and helping people is what drives me in this industry. In addition, I am meticulous and have an easy time simplifying complex tasks.
+    </p>
+    <p>
+        To see more of my school work, head on over to my
         <a href={ paths.addBase('/projects') }>
             <Icon icon="mdi:terminal"/>
             <span>projects</span>
