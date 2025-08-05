@@ -1,9 +1,13 @@
 <script lang='ts'>
 	import paths from '$lib/helpers/paths.svelte'
-	import Icon from '@iconify/svelte';
+	import Icon from '@iconify/svelte'
+    import DownloadButton from '$lib/components/Buttons/DownloadButton.svelte'
 </script>
 
 <img src={ paths.addBase('/img/profile.png') } alt='Anime style portrait of Ymer Nordström.'>
+<DownloadButton URL={ paths.addBase('/docs/Test_CV_YN_LIA.pdf') }>
+    <span>Download CV</span>
+</DownloadButton>
 <section>
     <h1>Ymer Nordström</h1>
     <h2>Software developer</h2>
