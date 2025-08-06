@@ -26,10 +26,21 @@
         font-size: 1.6rem;
         text-decoration: none;
         text-align: center;
+        transition: 0.2s ease-in-out;
 
-        &:hover {
+        &:hover, &:active {
             background-color: var(--color-blue-dark);
             text-decoration: underline;
+        }
+        
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: var(--box-shadow);
+        }
+        
+        &:active {
+            transform: scale(.9);
+            box-shadow: inset var(--box-shadow);
         }
 
         &:disabled {

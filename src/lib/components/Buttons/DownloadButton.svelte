@@ -10,7 +10,7 @@
     let { children, URL = '' }: DownloadButtonProps = $props()
 </script>
 <Button className='download' type='button' onClick={ () => {
-    window.open(URL, '_self', 'noopener noreferrer')
+    window.open(URL, '_blank', 'noopener noreferrer')
     } }>
     <Icon icon='mdi:download'/>
     {@render children?.()}
@@ -23,7 +23,7 @@
         gap: .5em;
         background-color: var(--color-green-dark);
         
-        &:hover {
+        &:hover, &:active {
             background-color: var(--color-green-darker);
         }
 
