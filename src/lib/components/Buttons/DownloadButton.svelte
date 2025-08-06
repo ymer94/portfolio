@@ -9,9 +9,24 @@
 
     let { children, URL = '' }: DownloadButtonProps = $props()
 </script>
-<Button type='button' onClick={ () => {
+<Button className='download' type='button' onClick={ () => {
     window.open(URL, '_self', 'noopener noreferrer')
     } }>
     <Icon icon='mdi:download' width='1em' height='1em' />
     {@render children?.()}
 </Button>
+
+<style>
+    :global(button.download) {
+        display: inline-flex;
+        align-items: center;
+        gap: .5em;
+        background-color: var(--color-green-dark);
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            background-color: var(--color-green-darker);
+        }
+    }
+</style>
