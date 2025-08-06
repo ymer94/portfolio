@@ -23,7 +23,7 @@
         </div>
         <section>
             <h2>
-                { name.replaceAll('-', ' ') }
+                { name.split('-').map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join(' ') }
                 <Icon icon='mdi:external-link'/>
             </h2>
             <p>{ description ?? 'No description available.' }</p>
