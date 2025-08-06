@@ -22,8 +22,10 @@
         border: none;
         border-radius: .5rem;
         background-color: var(--color-blue);
-        color: var(--colo-fg);
+        color: var(--color-fg);
+        font-size: 1.6rem;
         text-decoration: none;
+        text-align: center;
 
         &:hover {
             background-color: var(--color-blue-dark);

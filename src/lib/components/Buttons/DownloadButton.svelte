@@ -12,7 +12,7 @@
 <Button className='download' type='button' onClick={ () => {
     window.open(URL, '_self', 'noopener noreferrer')
     } }>
-    <Icon icon='mdi:download' width='1em' height='1em' />
+    <Icon icon='mdi:download'/>
     {@render children?.()}
 </Button>
 
@@ -22,11 +22,16 @@
         align-items: center;
         gap: .5em;
         background-color: var(--color-green-dark);
-        color: white;
-        text-decoration: none;
-
+        
         &:hover {
             background-color: var(--color-green-darker);
+        }
+
+        > :global(svg) {
+            position: relative;
+            top: .15em;
+            width: 1.2em;
+            height: 1.2em;
         }
     }
 </style>
