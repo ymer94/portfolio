@@ -5,7 +5,7 @@
 </script>
 
 <img src={ paths.addBase('/img/profile.png') } alt='Anime style portrait of Ymer Nordström.'>
-<DownloadButton URL={ paths.addBase('/docs/Test_CV_YN_LIA.pdf') }>
+<DownloadButton URL={ paths.addBase('/docs/CV_YN_LIA.pdf') }>
     Download CV
 </DownloadButton>
 <section>
