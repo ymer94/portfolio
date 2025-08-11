@@ -26,4 +26,6 @@ export class GitHubAPI {
                 return repos
             })()
     }
+
+    public getUserName = () => this.userName
 }
