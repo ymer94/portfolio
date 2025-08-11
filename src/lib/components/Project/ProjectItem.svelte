@@ -54,7 +54,6 @@
     
             &:hover {
                 color: var(--color-purple-link);
-                text-decoration: underline;
             }
             
             h2 {
