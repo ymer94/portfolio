@@ -2,7 +2,7 @@
     import { GitHubAPI }  from '$lib/services/gitHubAPI'
     import ProjectList from '$lib/components/Project/ProjectList.svelte'
 
-    const APIs = [...['Ymer-MI', 'Ymer94'].map<GitHubAPI>(u => new GitHubAPI(u))/* , new GitHubAPI('') */]
+    const APIs = [...['Ymer-MI'/* , 'Ymer94' */].map<GitHubAPI>(u => new GitHubAPI(u))/* , new GitHubAPI('') */]
 </script>
 
 <h1>My projects</h1>
