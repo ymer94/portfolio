@@ -2,27 +2,36 @@
     import NavigationItem, { type NavigationPageObject } from './NavItem.svelte'
     import HamburgerButton from './HamburgerButton.svelte'
 
-    const navPgObjs: NavigationPageObject[] = [{
-        name: {
-            en: 'Home',
-            sv: 'Hem'
+    const navPgObjs: NavigationPageObject[] = [
+        {
+            name: {
+                en: 'Home',
+                sv: 'Hem'
+            },
+            path: '/'
         },
-        path: '/'
-    },
-    {
-        name: {
-            en: 'About',
-            sv: 'Om'
+        {
+            name: {
+                en: 'Projects',
+                sv: 'Projekt'
+            },
+            path: '/projects'
         },
-        path: '/about'
-    },
-    {
-        name: {
-            en: 'Contact',
-            sv: 'Kontakt'
+        {
+            name: {
+                en: 'About',
+                sv: 'Om'
+            },
+            path: '/about'
         },
-        path: '/contact'
-    }]
+        {
+            name: {
+                en: 'Contact',
+                sv: 'Kontakt'
+            },
+            path: '/contact'
+        }
+    ]
 
     let isOpen = false;
 </script>
