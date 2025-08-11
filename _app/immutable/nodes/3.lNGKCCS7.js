@@ -1,1 +1,0 @@
-import"../chunks/Bzak7iHL.js";import"../chunks/69_IOA4Y.js";import{f as m,a as t}from"../chunks/CF4ThbqG.js";var a=m("<h1>Om mig  - Ymer Nordström</h1>");function n(o){var r=a();t(o,r)}export{n as component};

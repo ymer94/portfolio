@@ -1,18 +1,12 @@
 @import 'tailwindcss';
 @import './icons.css';
+@import './colors.css';
 @import './radlush.css';
 @import './header.css';
 @import './main.css';
 
 :root {
-    --color-bg: #222;
-    --color-fg: #ddd;
-
-    --color-purple-light: #b3f;
-    --color-purple: #80f;
-    --color-purple-dark: #409;
-    --color-purple-darker: #306;
-    --color-purple-link: #dd0;
+    --box-shadow: 0 0 .5rem .5rem var(--color-gray-darker);
 
     background-color: var(--color-bg);
     color: var(--color-fg);
