@@ -13,35 +13,27 @@
 </script>
 
 <li>
+    <div>
+        {#if !imgErr[id]}
+            <img src={ paths.addBase(`/img/repoThumbnails/${ full_name }.png`) } alt={ full_name } onerror={() => imgErr[id] = true }/>
+        {:else}
+            <Icon icon='mdi:image-off' width='100%' />
+        {/if}
+    </div>
     <a href={ html_url } target='_blank'>
-        <div>
-            {#if !imgErr[id]}
-                <img src={ paths.addBase(`/img/repoThumbnails/${ full_name }.png`) } alt={ full_name } onerror={() => imgErr[id] = true }/>
-            {:else}
-                <Icon icon='mdi:image-off' width='100%' />
-            {/if}
-        </div>
-        <section>
-            <h2>
-                { name.split('-').map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join(' ') }
-                <Icon icon='mdi:external-link'/>
-            </h2>
-            <p>{ description ?? 'No description available.' }</p>
-        </section>
+        <h2>
+            { name.split('-').map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join(' ') }
+            <Icon icon='mdi:external-link'/>
+        </h2>
     </a>
+    <p>{ description ?? 'No description available.' }</p>
 </li>
 
 <style>
-    a {
+    li {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         gap: .5em;
-        color: var(--color-fg);
-
-        &:hover {
-            text-decoration: underline;
-        }
 
         div {
             align-self: center;
@@ -56,18 +48,20 @@
                 object-fit: fill;
             }
         }
-
-        section {
-
+    
+        a {
+            color: var(--color-fg);
+    
             &:hover {
                 color: var(--color-purple-link);
+                text-decoration: underline;
             }
             
             h2 {
-                display: inline-flex;
-                width: fit-content;
-                gap: .1em;
                 text-align: left;
+                :global(svg) {
+                    display: inline;
+                }
             }
         }
     }
