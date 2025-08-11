@@ -1,14 +1,14 @@
 <script lang='ts'>
-	import Navigation from './Navigation/navigation.svelte'
-	import Socials from './Social Links/socials.svelte'
+	import NavigationList from './Navigation/NavList.svelte'
+	import SocialsList from './SocialLinks/SocList.svelte'
 </script>
 
 <header class='sticky top-0 z-50' style='--icon-size: 2.4rem'>
-	<Socials />
+	<SocialsList />
 	<div>
 		<i class='icon thors-coding'></i>
 	</div>
-	<Navigation />
+	<NavigationList />
 </header>
 
 <style>
