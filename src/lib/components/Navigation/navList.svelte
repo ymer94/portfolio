@@ -16,7 +16,7 @@
                 sv: 'Projekt'
             },
             path: '/projects'
-        },
+        }/* ,
         {
             name: {
                 en: 'About',
@@ -30,7 +30,7 @@
                 sv: 'Kontakt'
             },
             path: '/contact'
-        }
+        } */
     ]
 
     let isOpen = false;
