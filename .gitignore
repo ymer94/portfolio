@@ -30,3 +30,4 @@ pnpm-*.yaml
 _app
 *.jpg~
 *.kra
+*.7z
