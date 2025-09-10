@@ -7,8 +7,4 @@ i.icon {
     &.gitlab {
         background-image: url('/img/svg/gitlab.svg');
     }
-
-    &.thors-coding {
-        background-image: url('/img/tc/ico/icon.ico');
-    }
 }
