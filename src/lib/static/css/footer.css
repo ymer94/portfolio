@@ -1,0 +1,4 @@
+body > footer {
+    background-color: var(--color--bg--footer);
+    text-align: center;
+}

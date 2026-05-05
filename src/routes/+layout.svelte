@@ -1,6 +1,7 @@
 <script lang='ts'>
 	import 'css/style.css'
 	import Header from '$lib/components/Header.svelte'
+	import Footer from 'lib/components/Footer.svelte';
 
 	let { children } = $props()
 </script>
@@ -15,4 +16,4 @@
 <main>
 	{@render children()}
 </main>
-<footer></footer>
+<Footer />

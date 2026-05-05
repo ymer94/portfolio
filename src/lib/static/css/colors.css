@@ -3,7 +3,7 @@
     --color-purple: #80f;
     --color-purple-dark: #409;
     --color-purple-darker: #306;
-    --color-purple-link: #dd0;
+    --color-purple-link: var(--color-yellow);
     
     --color-blue-light: #44d;
     --color-blue: #00d;
@@ -32,6 +32,9 @@
     
     --color-bg: var(--color-gray-darker);
     --color-fg: #ddd;
+
+    --color--bg--header: #1a1a1a;
+    --color--bg--footer: var(--color--bg--header);
     
     --color-disabled: var(--color-gray-dark);
 }

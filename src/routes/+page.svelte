@@ -4,8 +4,8 @@
     import DownloadButton from '$lib/components/Buttons/DownloadButton.svelte'
 </script>
 
-<img src={ paths.addBase('/img/profile.png') } alt='Anime style portrait of Ymer Nordström.'>
-<DownloadButton URL={ paths.addBase('/docs/CV_YN_LIA.pdf') }>
+<img src={ paths.addBase('/img/profile.jpg') } alt='Portrait of Ymer Nordström.'>
+<DownloadButton URL={ paths.addBase('/docs/YN-CV-FS.pdf') }>
     Download CV
 </DownloadButton>
 <section>
@@ -22,8 +22,7 @@
     <p>
         To see more of my school work, head on over to my
         <a href={ paths.addBase('/projects') }>
-            <Icon icon="mdi:terminal"/>
-            <span>projects</span>
+            <Icon icon="mdi:terminal"/>projects
         </a>
         page.
     </p>
@@ -69,15 +68,15 @@
         <li>
             <Icon icon='devicon:nodejs' />Node.js 
             <span>(</span>
-            <Icon icon='devicon:express' />Express, 
-            <Icon icon='devicon-plain:axios' color='#5a29e4' />Axios
+            <Icon icon='skill-icons:expressjs-light' />Express, 
+            <Icon icon='devicon-plain:axios' />Axios
             <span>...</span>
             <span>)</span>
         </li>
         <li>
             <Icon icon='devicon:git'/>Git
             <span>/</span>
-            <Icon icon='devicon:github' />GitHub
+            <Icon icon='cib:github' />GitHub
             <span>/</span>
             <Icon icon='devicon:gitlab' />GitLab
         </li>
@@ -90,6 +89,8 @@
         height: 15rem;
         border: .25rem solid var(--color-purple-light);
         border-radius: 50%;
+        object-fit: cover;
+        object-position: 0 -1.5rem;
     }
 
     section, p, ul {

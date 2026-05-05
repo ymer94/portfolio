@@ -3,6 +3,7 @@
 @import './colors.css';
 @import './radlush.css';
 @import './header.css';
+@import './footer.css';
 @import './main.css';
 
 :root {
@@ -41,23 +42,26 @@ h3 {
 
 a, button {
     cursor: pointer;
+    line-height: 1;
 }
 
 a {
     display: inline-flex;
-    align-items: baseline;
     gap: .25em;
+    align-items: center;
+    vertical-align: middle;
     color: var(--color-purple-link);
 
     &:hover, &:active, > span {
         text-decoration: underline;
     }
 
+    > * {
+        height: 1em;
+    }
+
     > svg {
         width: 1em;
-        height: 1em;
-        position: relative;
-        top: .3em;
     }
 }
 
