@@ -2,7 +2,7 @@
     import { GitHubAPI }  from '$lib/services/gitHubAPI'
     import ProjectList from '$lib/components/Project/ProjectList.svelte'
 
-    const APIs = ['Ymer-MI', 'Ymer94'].map<GitHubAPI>(u => new GitHubAPI(u))
+    const APIs = ['Ymer-MI', 'ymer94'].map<GitHubAPI>(u => new GitHubAPI(u))
 </script>
 
 <h1>My projects</h1>
@@ -15,7 +15,7 @@ Welcome to my projects page! Here you can find a collection of my work, includin
             <p>Loading repositories of { API.getUserName() }...</p>
         {:then repos}
             <h1>{API.getUserName()}'s repositories</h1>
-            <ProjectList repos={ repos.filter(r => API.getUserName() !== 'Ymer94' || r.name.toLowerCase() === 'portfolio' ) } />
+            <ProjectList repos={ repos.filter(r => API.getUserName() !== 'ymer94' || r.name.toLowerCase() === 'portfolio' ) } />
         {:catch error}
             <p>Error loading repositories: { error.message }</p>
         {/await}
