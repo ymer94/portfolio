@@ -10,7 +10,7 @@
 Welcome to my projects page! Here you can find a collection of my work, including web applications, libraries, and other software projects. For now these are only school projects bet as I build more I will include them too. Feel free to explore and reach out if you have any questions or feedback!
 </p>
 {#each APIs as API (API.getUserName())}
-    <section>
+    <section class='project-section'>
         {#await API.getRepos()}
             <p>Loading repositories of { API.getUserName() }...</p>
         {:then repos}
@@ -21,3 +21,9 @@ Welcome to my projects page! Here you can find a collection of my work, includin
         {/await}
     </section>
 {/each}
+
+<style>
+    .project-section:not(:last-child) {
+        margin-bottom: 2em;
+    }
+</style>

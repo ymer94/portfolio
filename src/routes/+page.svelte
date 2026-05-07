@@ -2,6 +2,7 @@
 	import paths from '$lib/helpers/paths.svelte'
 	import Icon from '@iconify/svelte'
     import DownloadButton from '$lib/components/Buttons/DownloadButton.svelte'
+	import Link from 'lib/components/Links/Link.svelte';
 </script>
 
 <img src={ paths.addBase('/img/profile.jpg') } alt='Portrait of Ymer Nordström.'>
@@ -21,9 +22,9 @@
     </p>
     <p>
         To see more of my school work, head on over to my
-        <a href={ paths.addBase('/projects') }>
+        <Link href={ paths.addBase('/projects') }>
             <Icon icon="mdi:terminal"/>projects
-        </a>
+        </Link>
         page.
     </p>
 </section>

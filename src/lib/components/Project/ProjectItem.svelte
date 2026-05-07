@@ -1,7 +1,8 @@
 <script lang='ts'>
+	import { type IGitHubRepo } from 'lib/models/IGitHubRepo'
     import paths from '$lib/helpers/paths.svelte'
     import Icon from '@iconify/svelte'
-	import { type IGitHubRepo } from 'lib/models/IGitHubRepo'
+	import ExternalLink from '../Links/ExternalLink.svelte';
 
     type Props = {
         repo: IGitHubRepo
@@ -20,12 +21,12 @@
             <Icon icon='mdi:image-off' width='100%' />
         {/if}
     </div>
-    <a href={ html_url } target='_blank'>
+    <ExternalLink href={ html_url } className='project-link'>
         <h2>
             { name.split('-').map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`).join(' ') }
             <Icon icon='mdi:external-link'/>
         </h2>
-    </a>
+    </ExternalLink>
     <p>{ description ?? 'No description available.' }</p>
 </li>
 
@@ -49,7 +50,7 @@
             }
         }
     
-        a {
+        :global(.project-link) {
             color: var(--color-fg);
     
             &:hover {
@@ -66,7 +67,7 @@
     }
 
     @media (width >= 76.8rem) {
-        a {
+        :global(.project-link) {
             flex-direction: row;
         }
     }

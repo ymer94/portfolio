@@ -1,12 +1,13 @@
 <script lang='ts'>
+	import paths from 'lib/helpers/paths.svelte';
 	import NavigationList from './Navigation/NavList.svelte'
-	import SocialsList from './SocialLinks/SocList.svelte'
+	import SocialsList from './Links/SocialLinks/SocList.svelte'
 </script>
 
 <header class='sticky top-0 z-50' style='--icon-size: 2.4rem'>
 	<SocialsList />
 	<div>
-		<a href='/' aria-label='home'>
+		<a href={paths.addBase('/')} aria-label='home'>
 			<i class='icon thors-coding'></i>
 		</a>
 	</div>

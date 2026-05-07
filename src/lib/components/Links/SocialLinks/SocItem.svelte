@@ -1,5 +1,6 @@
 <script lang='ts'>
     import Icon from '@iconify/svelte'
+	import ExternalLink from '$lib/components/Links/ExternalLink.svelte';
 
     export type SocialItemObject = {
         name: string,
@@ -19,7 +20,7 @@
 </script>
 
 <li>
-    <a href={ url } target='_blank' rel='noopener noreferrer'>
+    <ExternalLink href={ url } className='social-link'>
         {#if icon.name.startsWith('.')}
             <i class={ `icon ${icon.name.slice(1)}` }></i>
         {:else}
@@ -28,7 +29,7 @@
         {#if displayName}
             { name }
         {/if}
-    </a>
+    </ExternalLink>
 </li>
 
 <style>
@@ -36,7 +37,7 @@
         display: flex;
         align-items: center;
 
-        a {
+        :global(.social-link) {
             display: flex;
             align-items: center;
 

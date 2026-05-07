@@ -4,6 +4,7 @@
 	import { onDestroy } from 'svelte'
 	import paths from 'lib/helpers/paths.svelte'
     import 'css/error.css'
+	import Link from 'lib/components/Links/Link.svelte';
 
     const { page } = getStores(), home = paths.addBase('/')
 
@@ -23,5 +24,5 @@
 <div class="error-container">
     <h1>{ $page.status }: { $page.error?.message }</h1>
     <p>Sorry, the page you're looking for doesn't exist.</p>
-    <a href={ home }><button type="button">Go back home</button></a>
+    <Link href={ home }><button type="button">Go back home</button></Link>
 </div>
