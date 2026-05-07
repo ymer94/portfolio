@@ -18,7 +18,7 @@ export class GitHubAPI {
     public getRepos = async () => {
         const respObj = this.LSRepos.get()
 
-         return respObj && respObj.lastFetched.getDay() <= new Date(Date.now() + (864 * 10 ** 5)).getDay() ? respObj.repos : (async () => {
+         return respObj && respObj.lastFetched.getDay() <= new Date(Date.now() + (36 * 10 ** 5)).getDay() ? respObj.repos : (async () => {
                 const repos = (await this.service.get<IGitHubRepo[]>(`users/${this.userName}/repos`)).filter(r => r.visibility === 'public') ?? []
 
                 if (repos.length > 0) this.LSRepos.set({lastFetched: new Date(), repos} satisfies LSRespObj as LSRespObj)

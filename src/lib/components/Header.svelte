@@ -6,7 +6,9 @@
 <header class='sticky top-0 z-50' style='--icon-size: 2.4rem'>
 	<SocialsList />
 	<div>
-		<i class='icon thors-coding'></i>
+		<a href='/' aria-label='home'>
+			<i class='icon thors-coding'></i>
+		</a>
 	</div>
 	<NavigationList />
 </header>
@@ -23,12 +25,15 @@
 		}
 
 		> :nth-child(2) {
+			padding: 0;
 			text-align: center;
 		}
 
 		i {
-			width: 4em;
-			height: 4em;
+			--size: 4em;
+
+			width: var(--size);
+			height: var(--size);
 			vertical-align: middle;
 		}
 	}
